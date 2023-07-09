@@ -1,0 +1,10 @@
+{
+  "transform": {
+    "^.+\\.(t|j)s?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/) (test|spec))\\.(js?|ts?)$",
+  "moduleFileExtensions": ["ts", "js"],
+  "verbose": true,
+  "coverageProvider": "v8",
+  "coverageReporters": ["clover", "json", "lcov", "text"]
+}

@@ -65,16 +65,16 @@ function removeUnknownProperties<O extends object, S extends object>(
     if (schemaKeys.includes(key as any)) {
       // if strict is true remove properties that not match in type with schema
       if (strict) {
-        //@ts-ignore
+        // @ts-ignore
         if (getType(obj[key]) !== getType(schema[key])) {
           unknownKeys.push(key);
           continue;
         }
       }
       // if the current property is object type recall removeUnknownProperties with current property
-      //@ts-ignore
+      // @ts-ignore
       if (isNativeObject(obj[key]) && isNativeObject(schema[key])) {
-        //@ts-ignore
+        // @ts-ignore
         removeUnknownProperties(obj[key], schema[key], options);
       }
     }

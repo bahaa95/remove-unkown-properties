@@ -1,5 +1,5 @@
 {
-  "name": "remove-unkown-properties",
+  "name": "remove-unknown-properties",
   "version": "0.0.0",
   "description": "Remove unknown properties from a given object",
   "main": "dist/index.js",
@@ -20,13 +20,13 @@
     "postversion": "git push && git push --tags"
   },
   "keywords": [
-    "remove-unkown-properties",
-    "unkown-properties",
+    "remove-unknown-properties",
+    "unknown-properties",
     "typescript",
     "node",
     "javascript",
-    "javascript remove unkown properties",
-    "javascript delete unkown properties"
+    "javascript remove unknown properties",
+    "javascript delete unknown properties"
   ],
   "author": "bahaa adel <probahaa9@gmail.com> (https://bahaa-adel.vercel.app)",
   "repository": {

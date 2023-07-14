@@ -1,6 +1,6 @@
 {
   "name": "remove-unknown-properties",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove unknown properties from a given object",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -54,9 +54,11 @@ const schema = {
     }
 }
 
-// this function will rmove unknown properties from student using schema in this will
-// delete salary, department properties
-// this function will mutate orginal object
+/**
+ * this function will remove unknown properties from student object based on * * schema.
+ * it will delete salary, department, and barcode properties.
+ * note:this function will mutate original object.
+ */
 removeUnknown(student, schema);
 
 console.log(student);
@@ -71,7 +73,7 @@ console.log(student);
  *    codes:{
         postalCode:1100,
         zipCode:1100
-        }
+      }
  *  }
  * }
  * /
@@ -130,22 +132,6 @@ onst schema = {
     },
     pohonNumbers: []
 }
-```
-
-- `also we can use third party libraries like zod.`
-
-```typescript
-import zod from 'zod';
-
-onst schema = zod.object({
-    name: zod.string(),
-    age: zod.number().max(150),
-    address: zod.object({
-        country: zod.string(),
-        .
-        .
-    })
-})
 ```
 
 ## Strict

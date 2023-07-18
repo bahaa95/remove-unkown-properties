@@ -89,10 +89,10 @@ console.log(student);
 
 There are multiple way to create schema.
 
-- `using javascript built in types constructor functions.`
+- `using javascript built in types constructor.`
 
 ```typescript
-onst schema = {
+const schema = {
     name: String,
     age: Number,
     address:{
@@ -108,7 +108,7 @@ onst schema = {
 ```typescript
 import { Types } from 'remove-unknown-properties';
 
-onst schema = {
+const schema = {
     name: Types.String,
     age: Types.Number,
     address:{
@@ -123,7 +123,7 @@ onst schema = {
 
 ```typescript
 
-onst schema = {
+const schema = {
     name: "",
     age: 0,
     address:{
@@ -138,38 +138,7 @@ onst schema = {
 
 When strict is true removeUnknown property will remove known property from obj if it is has different type from schema.
 
-**_NOTE:_** When set strict to true you should use `Types` to build your schema to get accurate result. other wise you should be carefull for your schema types.
-
-Example without using `Types`
-
-```typescript
-import { removeUnknown } from 'remove-unknown-properties';
-
-const student = {
-    name: 'adam',
-    age:"16", //known property but will be removed becouse it string type not number  constructor function
-    stage: "any", //known property but will be removed becouse it string type not string constructor function
-    salary:1000, //unknown property
-    phoneNumbers:['12345678','87654321']  //known property but will be removed becouse it array type not object  constructor function
-}
-
-const schema = {
-    name: "",
-    stage:String,// its type string constructor function not string
-    age: Number, // its type number constructor function not number
-    phoneNumbers:Array // its type array constructor function not array
-}
-
-removeUnknown(student, schema, {strict: true});
-// result will be =>
-/**
- * {
- *  name: 'adam',
- * }
- * /
-```
-
-Example by using `Types`
+**_NOTE:_** When set strict to true you must use `Types` to build your schema to get accurate result. otherwise you will lose your data.
 
 ```typescript
 import { removeUnknown, Types } from 'remove-unknown-properties';
@@ -177,7 +146,7 @@ import { removeUnknown, Types } from 'remove-unknown-properties';
 const student = {
     name: 'adam',
     age:"16", //will remove becouse it string not number
-    stage: new String("any"),
+    stage: "any",
     salary:1000, //unknown property
     phoneNumbers:['12345678','87654321']
 }

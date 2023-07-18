@@ -5,14 +5,18 @@ describe('removeUnknown.test', () => {
   describe('removeUnknown', () => {
     it('should throw error if one or both of obj and schema is not native object', () => {
       try {
-        expect(removeUnknown({}, [])).toThrow();
-        expect(removeUnknown(null as any, {})).toThrow();
-        expect(removeUnknown([], [])).toThrow();
-        expect(removeUnknown({}, null as any)).toThrow();
+        expect(removeUnknown({}, [])).toThrow();  
       } catch {}
+      
       try {
-        expect(removeUnknown(null as any, {})).toThrow();
+        expect(removeUnknown(null as any, {})).toThrow()
+      } catch {}
+
+      try {
         expect(removeUnknown([], [])).toThrow();
+      } catch {}
+
+      try {
         expect(removeUnknown({}, null as any)).toThrow();
       } catch {}
     });

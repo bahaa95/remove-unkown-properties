@@ -136,7 +136,7 @@ const schema = {
 
 ## Strict
 
-When strict is true removeUnknown property will remove known property from obj if it is has different type from schema.
+When strict is true removeUnknown will remove unknown properties and  known properties from obj if it is has different type from schema.
 
 **_NOTE:_** When set strict to true you must use `Types` to build your schema to get accurate result. otherwise you will lose your data.
 
@@ -163,7 +163,7 @@ removeUnknown(student, schema, {strict: true});
 /**
  * {
  *  name: 'adam',
- *  stage::'any',
+ *  stage:'any',
  *  phoneNumbers: ['12345678','87654321']
  * }
  * /
